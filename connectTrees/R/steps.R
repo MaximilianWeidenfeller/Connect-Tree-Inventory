@@ -1,6 +1,4 @@
-install.packages("usethis")
-usethis::create_package("connectTrees")
-
+#structure
 
 #load inventory
 
