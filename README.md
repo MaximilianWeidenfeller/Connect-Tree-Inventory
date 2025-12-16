@@ -1,6 +1,6 @@
 The connect_trees function is used to spatially link repeated forest inventory data derived from point clouds.   
 
-The inventory datasets must contain the fields X, Y, and BHD (breast height diameter) in centimeters.   
+The inventory datasets must contain the fields X, Y, and BHD (breast height diameter) in centimeters (.csv, UTF8).   
 
 The output of the function is an adjusted version of the new inventory, in which trees have been spatially matched (connected) to those from the previous inventory. 
 
