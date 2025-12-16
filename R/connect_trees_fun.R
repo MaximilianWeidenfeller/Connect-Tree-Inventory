@@ -2,8 +2,8 @@ library(dplyr)
 library(RANN)
 
 connect_trees <- function(
-    inventur_alt_path,
-    inventur_neu_path,
+    inventory_old_path,
+    inventory_new_path,
     lower_limit = 0.4,
     upper_limit = 0.7
 ) {
@@ -88,8 +88,8 @@ connect_trees <- function(
   # --------------------------------------------------------------
   # 1. Daten einlesen und filtern
   # --------------------------------------------------------------
-  Inventur_alt_raw <- read.csv(inventur_alt_path)
-  Inventur_neu_raw <- read.csv(inventur_neu_path)
+  Inventur_alt_raw <- read.csv(inventory_old_path)
+  Inventur_neu_raw <- read.csv(inventory_new_path)
   
   Inventur_alt <- transmute(Inventur_alt_raw, X = X, Y = Y, BHD = BHD / 100)
   Inventur_neu <- transmute(Inventur_neu_raw, X = X, Y = Y, BHD = BHD / 100)
